@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <title>Binary game</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This is gonna be fun (goofy ahhh game)">
+    <meta name="keywords" content="goofy, goofy ahh, game">
+    <meta name="author" content="Skibidiusz Klozeciński">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- Icon -->
+    <link rel="icon" href="img/icon.png" type="image/png">
+</head>
+<body>
+    <div id="global-container">
+
+        <header><h1 id="title">N0n-b1nary number ;)</h1></header>
+
+        <article>
+            <div id="difficulty-box">
+                <div class="difficulty-buttons difficulty-buttons-active easy-button-active" id="easy-button"><span>Easy</span></div>
+                <div class="difficulty-buttons difficulty-buttons-active medium-button-active" id="medium-button"><span>Medium</span></div>
+                <div class="difficulty-buttons difficulty-buttons-active hard-button-active" id="hard-button"><span>Hard</span></div>
+                <div class="difficulty-buttons difficulty-buttons-active extreme-button-active" id="extreme-button"><span>Extreme</span></div>
+            </div>
+        </article>
+
+        <aside>
+            <div class="help-button-active" id="help-button"><span style="display: block">?</span></div>
+            <div id="help-panel">
+                <h1>HELP</h1>
+                <ol>
+                    <li>Your goal is to set buttons on the screen so they represent the number in the bottom of the screen in the binary system.</li>
+                    <li>Helpers work differently on different modes, especially on <span class="extreme">extreme</span> ;)</li>
+                    <li>The round score is calculated with following rules:</li>
+                    <ul>
+                        <li>BASIC AMOUNT equals to 100</li>
+                        <li>The number of seconds it took you to guess correctly is subtracted from the BASIC AMOUNT</li>
+                        <li>Then the outcome is multiplied by a number specific for each mode:</li>
+                        <ul></ul>
+                        <li>Finally, the result is rounded up to the nearest integer, if necessary. This is your round score.</li>
+                    </ul>
+                    <li>If you lose a game, no points are added to your overall score.</li>
+                    <li>Have FUN ^_^</li>
+                </ol>
+            </div>
+            <div class="control-buttons control-buttons-active" id="sound-button">Sound<br>ON</div>
+            <div class="control-buttons control-buttons-active" id="music-button">Music<br>ON</div>
+        </aside>
+
+        <main>
+            <canvas id="canva"></canvas>
+        </main>
+
+        <article>
+            <div id="score-board">
+                <div id="global-score">Score: 0</div>
+                <div id="games-failed">Failed: 0</div>
+                <div id="easy-won">Easy: 0</div>
+                <div id="medium-won">Medium: 0</div>
+                <div id="hard-won">Hard: 0</div>
+                <div id="extreme-won">Extreme: 0</div>
+            </div>
+        </article>
+
+        <aside>
+            <div class="control-buttons control-buttons-active" id="helpers-button">Helpers<br>ON</div>
+            <div id="helpers-extreme-easteregg">It's called<br>EXTREME for a reason ;))</div>
+        </aside>
+
+        <footer><div id="instruction">Controls: [a] - move left | [w] - jump | [d] - move right</div></footer>
+
+        <article>    
+            <div id="ending-screen">
+                <div class="ending-screen-buttons" id="change-difficulty-button">CHANGE DIFFICULTY</div>
+                <div class="ending-screen-buttons" id="play-again-button">PLAY AGAIN</div>
+                <div id="score-info"></div>
+            </div>
+        </article>        
+    </div>
+
+    <script src="jQuery_v3.7.1.min.js" type="text/javascript"></script>
+    <script src="script.js" type="text/javascript"></script>
+</body>
+</html>
